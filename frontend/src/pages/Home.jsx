@@ -1,9 +1,10 @@
 import React from 'react'
+import SideBar from "../components/sidebar/SideBar"
 
 const Home = () => {
   return (
     <>
-    <h1 className='text-3xl flex items-center justify-center'>Home</h1>
+    <SideBar />
       
     </>
   )

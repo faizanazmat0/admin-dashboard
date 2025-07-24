@@ -1,0 +1,65 @@
+/* Logo and Toggle Button */
+.sideBarConatiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sideBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  margin-left: 100px;
+ 
+}
+.sideBar img {
+  width: 40px;
+  height: 40px;
+  margin: 0px 8px 0px 20px;
+}
+.sideBar span {
+  font-size: 28px;
+  font-weight: 900;
+  font-family: sans-serif;
+  color: #2c7be5;
+}
+
+/* SideBar Toggle Button */
+.toggleWrapper {
+  position: relative;
+}
+.toggleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5e6e82;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: #d8e2ef 0.2s ease;
+}
+.toggleButton .toggleToolTip {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 10px;
+  border-radius: 4px;
+  position: absolute;
+  top: 20%;
+  left: 110%;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+.toggleButton:hover {
+  background-color: #d8e2ef;
+}
+.toggleButton:hover .toggleToolTip {
+  visibility: visible;
+  opacity: 1;
+}
