@@ -1,23 +1,30 @@
+/* SideBar Wrapper */
+.sideBarWrapper {
+  width: 350px;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
 /* Logo and Toggle Button */
 .sideBarConatiner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  margin-left: 105px;
+  padding: 20px 0px;
+  gap: 14px;
 }
-.sideBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  margin-left: 100px;
- 
-}
-.sideBar img {
+
+.sideBarConatiner img {
   width: 40px;
   height: 40px;
-  margin: 0px 8px 0px 20px;
+
 }
-.sideBar span {
+.sideBarConatiner span {
   font-size: 28px;
   font-weight: 900;
   font-family: sans-serif;
@@ -35,7 +42,7 @@
   color: #5e6e82;
   border: none;
   border-radius: 50%;
-  padding: 10px;
+  margin-right: 12px;
   cursor: pointer;
   position: relative;
   transition: #d8e2ef 0.2s ease;
@@ -62,4 +69,11 @@
 .toggleButton:hover .toggleToolTip {
   visibility: visible;
   opacity: 1;
+}
+
+/* Items Wrapper */
+.itemsWrapper {
+  overflow-y: auto;
+  flex-grow: 1;
+  padding: 0 20px;
 }
