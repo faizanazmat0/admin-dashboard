@@ -69,3 +69,47 @@
   border-radius: 4px;
   margin-left: 8px;
 }
+
+/* App Section */
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 350px;
+  padding: 10px 0px 10px 64px;
+}
+.appHeading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.appHeading h5 {
+  margin: 0;
+  font-weight: 600;
+  color: #adb8c7;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+.headingUnderLine {
+  flex: 1;
+  height: 1px;
+  background-color: #adb8c7;
+  margin-left: 10px;
+}
+.appLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  gap: 16px;
+  padding: 8px 0px;
+  transition: all 0.2 ease;
+  cursor: pointer;
+  color: #5e6e82;
+}
+.appLink:hover {
+  color: #0d1116;
+}

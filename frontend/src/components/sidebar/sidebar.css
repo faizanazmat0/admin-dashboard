@@ -1,6 +1,6 @@
 /* SideBar Wrapper */
 .sideBarWrapper {
-  width: 350px;
+  max-width: 350px;
   height: 100vh;
   overflow: hidden;
   display: flex;
