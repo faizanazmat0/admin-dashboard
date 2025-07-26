@@ -98,6 +98,10 @@
   background-color: #adb8c7;
   margin-left: 10px;
 }
+.appListingWrapper {
+  display: flex;
+  flex-direction: column;
+}
 .appLink {
   display: flex;
   align-items: center;

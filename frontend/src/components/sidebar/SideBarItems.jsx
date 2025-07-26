@@ -63,7 +63,8 @@ const SideBarItems = () => {
           <h5>App</h5>
           <div className="headingUnderLine"></div>
         </div>
-        <div className="appListings">
+        {/* Listings Items */}
+        <div className="appListingWrapper">
           <div>
             <Link className="appLink">
               <CalendarDays size={18} />
@@ -130,3 +131,126 @@ const SideBarItems = () => {
 };
 
 export default SideBarItems;
+
+/*
+  import React, { useState, useEffect, useRef } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { Link } from "react-router-dom";
+import {
+  dashboardItems,
+  appItems,
+  pageItems,
+  moduleItems,
+  documentationItems
+} from "./sidebaritems";
+import { LayoutDashboard } from "lucide-react";
+import "./sidebaritems.css";
+
+const SideBarItems = () => {
+  const [openDropdowns, setOpenDropdowns] = useState({});
+  const dropdownRefs = useRef({});
+
+  const toggleDropdown = (id) => {
+    setOpenDropdowns((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      Object.keys(dropdownRefs.current).forEach((id) => {
+        const ref = dropdownRefs.current[id];
+        if (ref && !ref.contains(e.target)) {
+          setOpenDropdowns((prev) => ({ ...prev, [id]: false }));
+        }
+      });
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const renderItem = (item) => {
+    const Icon = item.icon;
+    const isOpen = openDropdowns[item.id];
+
+    return (
+      <div key={item.id} ref={(el) => (dropdownRefs.current[item.id] = el)}>
+        {item.hasDropdown ? (
+          <>
+            <div className="sidebarLink" onClick={() => toggleDropdown(item.id)}>
+              <Icon size={18} />
+              <span>{item.label}</span>
+              {isOpen ? <ChevronDown size={16} /> : <ChevronUp size={16} />}
+            </div>
+            {isOpen && (
+              <div className="dropdownContent">
+                {item.dropdownItems.map((subItem, i) => (
+                  <Link key={i} to={subItem.href} className="dropdownItem">
+                    {subItem.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </>
+        ) : (
+          <Link className="sidebarLink" to={item.href}>
+            <Icon size={18} />
+            <span>{item.label}</span>
+          </Link>
+        )}
+      </div>
+    );
+  };
+
+  const renderSection = (id, title, items, isDashboard = false) => {
+    const isOpen = openDropdowns[id];
+
+    return (
+      <div className="section">
+        {isDashboard ? (
+          <div ref={(el) => (dropdownRefs.current[id] = el)}>
+            <div className="sidebarLink" onClick={() => toggleDropdown(id)}>
+              <LayoutDashboard size={18} />
+              <span>{title}</span>
+              {isOpen ? <ChevronDown size={16} /> : <ChevronUp size={16} />}
+            </div>
+            {isOpen && (
+              <div className="dropdownContent">
+                {items.map((item, i) => (
+                  <Link key={i} to={item.href} className="dropdownItem">
+                    {item.label}
+                    {item.tag && <span className="newTag">{item.tag}</span>}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        ) : (
+          <>
+            <h5 className="sectionHeading">{title}</h5>
+            <div className="sectionItems">
+              {items.map(renderItem)}
+            </div>
+          </>
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <div className="sidebar">
+      {renderSection("dashboard", "Dashboard", dashboardItems, true)}
+      {renderSection("app", "App", appItems)}
+      {renderSection("pages", "Pages", pageItems)}
+      {renderSection("modules", "Modules", moduleItems)}
+      {renderSection("documentation", "Documentation", documentationItems)}
+    </div>
+  );
+};
+
+export default SideBarItems;
+
+
+*/
