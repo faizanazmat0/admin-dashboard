@@ -106,6 +106,9 @@
   line-height: 1;
   cursor: pointer;
 }
+.badge-blue {
+  background-color: #3b82f6;
+}
 
 .dropdown-menu,
 .profile-dropdown {
@@ -155,6 +158,12 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   z-index: 50;
   min-width: 280px;
+
+  /* Scroll Bar Area */
+  max-height: 350px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 #f1f1f1;
 }
 
 .app-item {
@@ -208,9 +217,11 @@
   border-radius: 0.75rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   z-index: 50;
-  width: 320px;
+  width: 350px;
   max-height: 400px;
   overflow-y: auto;
+  scrollbar-width: thin;
+  transition: all 0.2s ease;
 }
 
 .notification-header {
@@ -225,6 +236,7 @@
   margin: 0;
   font-size: 1rem;
   font-weight: 600;
+  padding-top: 2px;
   color: #1f2937;
 }
 
@@ -248,7 +260,7 @@
 .section-label {
   display: block;
   padding: 0.5rem 1rem;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: #6b7280;
   text-transform: uppercase;
@@ -257,9 +269,11 @@
 
 .notification-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  gap: 0.4rem;
   padding: 0.75rem 1rem;
   transition: background-color 0.2s;
+  cursor: pointer;
 }
 
 .notification-item:hover {
@@ -267,16 +281,19 @@
 }
 
 .notification-avatar {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
+  font-size: 0.8rem;
   border-radius: 50%;
   margin-right: 0.75rem;
   flex-shrink: 0;
+  background-color: #646974;
 }
 
 .notification-avatar-text {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
+  font-size: 0.8rem;
   border-radius: 50%;
   background-color: #4b5563;
   color: white;
@@ -290,8 +307,8 @@
 }
 
 .notification-avatar-weather {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background-color: #dbeafe;
   display: flex;
@@ -308,8 +325,8 @@
 }
 
 .notification-content p {
-  margin: 0 0 0.25rem 0;
-  font-size: 0.875rem;
+  margin: 0 0 0.15rem 0;
+  font-size: 0.82rem;
   line-height: 1.4;
   color: #374151;
 }
@@ -339,4 +356,31 @@
 
 .view-all-btn:hover {
   text-decoration: underline;
+}
+
+/* ✅ DARK MODE STYLES */
+body.dark-mode {
+  background-color: #1a202c;
+  color: #f7fafc;
+}
+
+body.dark-mode input[type="text"] {
+  color: #000;
+}
+
+body.dark-mode .nav-icon,
+body.dark-mode .dropdown-arrow {
+  color: #e2e8f0;
+}
+
+body.dark-mode .dropdown-menu,
+body.dark-mode .apps-dropdown,
+body.dark-mode .notification-dropdown,
+body.dark-mode .profile-dropdown {
+  background-color: #2d3748;
+}
+
+body.dark-mode .notification-avatar-text,
+body.dark-mode .notification-avatar-weather {
+  background-color: #4a5568;
 }

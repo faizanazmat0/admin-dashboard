@@ -26,24 +26,58 @@ import {
 } from "../../assets/images/nav/navimages.js";
 
 const Navbar = () => {
+  // States for drop-down menus
   const [searchValue, setSearchValue] = useState("");
   const [showThemeDropdown, setShowThemeDropdown] = useState(false);
   const [showAppsDropdown, setShowAppsDropdown] = useState(false);
   const [showNotificationDropdown, setShowNotificationDropdown] =
     useState(false);
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  //  Refs for drop-down detection
+  const themeDropdownRef = useRef(null);
+  const appsDropdownRef = useRef(null);
+  const profileDropdownRef = useRef(null);
+  const notificationDropdownRef = useRef(null);
 
   const clearSearch = () => setSearchValue("");
 
-  const notificationDropdownRef = useRef(null);
+  // Toggle Dark Mode
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [isDarkMode]);
 
+  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
+      if (
+        themeDropdownRef.current &&
+        !themeDropdownRef.current.contains(event.target)
+      ) {
+        setShowThemeDropdown(false);
+      }
+      if (
+        appsDropdownRef.current &&
+        !appsDropdownRef.current.contains(event.target)
+      ) {
+        setShowAppsDropdown(false);
+      }
       if (
         notificationDropdownRef.current &&
         !notificationDropdownRef.current.contains(event.target)
       ) {
         setShowNotificationDropdown(false);
+      }
+      if (
+        profileDropdownRef.current &&
+        !profileDropdownRef.current.contains(event.target)
+      ) {
+        setShowProfileDropdown(false);
       }
     };
 
@@ -67,7 +101,7 @@ const Navbar = () => {
       </div>
 
       <div className="nav-icons">
-        <div className="icon-wrapper">
+        <div className="icon-wrapper" ref={themeDropdownRef}>
           <Settings
             className="nav-icon"
             onClick={() => setShowThemeDropdown(!showThemeDropdown)}
@@ -78,14 +112,17 @@ const Navbar = () => {
           />
           {showThemeDropdown && (
             <div className="dropdown-menu">
-              <div className="flex items-center justify-start gap-3">
+              <div
+                className="flex items-center justify-start gap-3"
+                onClick={() => setIsDarkMode(false)}
+              >
                 <Sun /> Light
               </div>
-              <div className="flex items-center justify-start gap-3">
+              <div
+                className="flex items-center justify-start gap-3"
+                onClick={() => setIsDarkMode(true)}
+              >
                 <Moon /> Dark
-              </div>
-              <div className="flex items-center justify-start gap-3">
-                <CircleDashed /> Auto
               </div>
             </div>
           )}
@@ -96,14 +133,19 @@ const Navbar = () => {
           <span className="badge">1</span>
         </div>
 
-        <div className="icon-with-badge">
+        <div className="icon-with-badge" ref={notificationDropdownRef}>
           <Bell
             className="nav-icon"
             onClick={() =>
               setShowNotificationDropdown(!showNotificationDropdown)
             }
           />
-          <span className="badge notification"></span>
+          <span
+            className="badge badge-blue"
+            onClick={() =>
+              setShowNotificationDropdown(!showNotificationDropdown)
+            }
+          ></span>
           {/* Notification dropdowm */}
           {showNotificationDropdown && (
             <div className="notification-dropdown">
@@ -164,13 +206,15 @@ const Navbar = () => {
           )}
         </div>
 
-        <div className="icon-wrapper">
+        <div className="icon-wrapper" ref={appsDropdownRef}>
           <Grip
             className="nav-icon"
             onClick={() => setShowAppsDropdown(!showAppsDropdown)}
           />
           {showAppsDropdown && (
             <div className="apps-dropdown">
+              {/* Extra wrapper for scroll area */}
+
               <div className="app-item">
                 <img src={profileImage} alt="Account" />
                 <span>Account</span>
@@ -219,7 +263,7 @@ const Navbar = () => {
           )}
         </div>
 
-        <div className="profile-wrapper">
+        <div className="profile-wrapper" ref={profileDropdownRef}>
           <img
             src={profileImage}
             className="profile-pic"
