@@ -1,0 +1,149 @@
+/* Weekly Sales Card Styles */
+.weekly-sales-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #f1f5f9;
+  width: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.weekly-sales-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* NEW: Main Layout - Left Stats, Right Chart */
+.card-content-layout {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+
+/* NEW: Left Column - Stats */
+.stats-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* NEW: Header with Help Icon */
+.card-header-with-help {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #344050;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+/* NEW: Help Icon and Tooltip */
+.help-icon-container {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.help-icon {
+  width: 14px;
+  height: 14px;
+  color: #9ca3af;
+  transition: color 0.2s ease;
+}
+
+.help-icon:hover {
+  color: #6b7280;
+}
+
+.help-tooltip {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.help-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #1f2937;
+}
+
+/* Sales Amount - Larger and Prominent */
+.sales-amount {
+  font-size: 40px;
+  font-weight: 400;
+  color: #5e6e82;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Trend Indicator */
+.sales-trend-positive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background: #d9f8eb;
+  padding: 6px 10px;
+  border-radius: 50px;
+  align-self: flex-start;
+}
+
+.trend-icon {
+  width: 14px;
+  height: 14px;
+  color: #16a34a;
+}
+
+.trend-percentage {
+  font-size: 12px;
+  font-weight: 600;
+  color: #16a34a;
+}
+
+/* NEW: Right Column - Chart */
+.chart-column {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 120px;
+}
+
+/* NEW: Custom Chart Tooltip */
+.chart-tooltip {
+  background-color: #fff;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: none;
+}

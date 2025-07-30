@@ -1,0 +1,106 @@
+/* Total Order Card Styles */
+.total-order-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #f1f5f9;
+  width: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.total-order-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Layout - Left Stats, Right Chart */
+.order-card-content-layout {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+
+/* Left Column - Stats */
+.order-stats-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Header with Help Icon */
+.order-card-header-with-help {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.order-card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #344050;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+/* Order Amount - Large and Prominent */
+.order-amount {
+  font-size: 40px;
+  font-weight: 400;
+  color: #5e6e82;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Trend Indicator */
+.order-trend-positive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  background: #edf2f9;
+  padding: 6px 10px;
+  border-radius: 50px;
+  align-self: flex-start;
+}
+
+.order-trend-icon {
+  width: 14px;
+  height: 14px;
+  color: #2c7be5;
+}
+
+.order-trend-percentage {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2c7be5;
+}
+
+/* Right Column - Chart */
+.order-chart-column {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 120px;
+}
+
+/* Custom Chart Tooltip */
+.order-chart-tooltip {
+  background-color: #fff;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: none;
+}
