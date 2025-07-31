@@ -1,0 +1,128 @@
+/* Market Share Card Styles */
+.market-share-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f1f5f9;
+  width: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.market-share-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Header */
+.market-card-header {
+  margin-bottom: 1px;
+}
+
+.market-header-content {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.market-card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #344050;
+  letter-spacing: -0.01em;
+}
+
+/* Main Content Layout */
+.market-content-layout {
+  display: flex;
+  align-items: center;
+}
+
+/* Chart Container */
+.market-chart-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.chart-wrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+/* Center Text in Donut Chart */
+.chart-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.center-number {
+  font-size: 30px;
+  font-weight: 400;
+  color: #111827;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+/* Legend Section */
+.market-legend {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 0;
+}
+
+.legend-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-company {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.legend-percentage {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+/* Custom Chart Tooltip */
+.market-chart-tooltip {
+  background-color: #fff;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+
+/* Chart Hover Effects */
+.recharts-pie-sector {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}

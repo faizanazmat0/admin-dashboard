@@ -3,6 +3,7 @@ import SideBar from "../components/sidebar/SideBar.jsx";
 import Navbar from "../components/navbar/Navbar.jsx";
 import WeeklySalesCard from "../components/cards/weeklysales/WeeklySalesCard.jsx";
 import TotalOrderCard from "../components/cards/totalorder/TotalOrderCard.jsx";
+import MarketShareCard from "../components/cards/marketshare/MarketShareCard.jsx";
 
 const Home = () => {
   return (
@@ -23,6 +24,9 @@ const Home = () => {
 
             <div className="w-[500px]">
               <TotalOrderCard />
+            </div>
+             <div className="w-[500px]">
+              <MarketShareCard />
             </div>
           </div>
         </div>
