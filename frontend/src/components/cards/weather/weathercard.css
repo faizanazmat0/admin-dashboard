@@ -1,0 +1,143 @@
+.weather-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #f1f5f9;
+  width: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0;
+}
+
+.weather-header h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #344050;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.more-btn {
+  color: #999;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 2px 4px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.more-btn:hover {
+  transform: scale(1.02);
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.weather-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.weather-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weather-icon img {
+  width: 60px;
+  height: 60px;
+}
+
+.location-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.city {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #344050;
+}
+
+.condition {
+  font-size: 12px;
+  font-weight: 500;
+  color: #f5803e;
+}
+
+.precipitation {
+  font-size: 12px;
+  font-weight: 600;
+  color: #5e6e82;
+}
+
+.temperature-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 8px;
+  gap: 4px;
+}
+
+.current-temp {
+  font-size: 40px;
+  font-weight: 400;
+  color: #2c7be5;
+  line-height: 1;
+}
+
+.temp-range {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Dropdown Wrapper */
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 320px;
+  right: 180px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 6px 0;
+  z-index: 10;
+  min-width: 200px;
+}
+
+.dropdown-item {
+  padding: 8px 14px;
+  font-size: 16px;
+  color: #334155;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f5f9;
+}
+
+.dropdown-item.remove {
+  color: #e53e3e;
+}
