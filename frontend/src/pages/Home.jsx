@@ -11,26 +11,46 @@ const Home = () => {
     <>
       <div className="flex min-h-screen">
         {/* Sidebar (fixed width) */}
-        <aside className="max-w-[350px] w-full">
+        <aside className="w-[350px]">
           <SideBar />
         </aside>
 
         {/* Main Content */}
-        <div className=" flex flex-col flex-1 p-4">
+        <div className="flex flex-1 flex-col">
           <Navbar />
-          <div className="cards flex flex-wrap gap-4 ">
-            <div className="w-[500px]">
-              <WeeklySalesCard />
+
+          {/* Cards Container aligned with search input */}
+          <div className="cards w-full">
+            {/* First Row - Two cards */}
+            <div
+              className="flex gap-8"
+              style={{
+                paddingLeft: "40px",
+                paddingRight: "100px",
+              }}
+            >
+              <div className="w-[50%] h-[200px]">
+                <WeeklySalesCard />
+              </div>
+              <div className="w-[50%] h-[200px]">
+                <TotalOrderCard />
+              </div>
             </div>
 
-            <div className="w-[500px]">
-              <TotalOrderCard />
-            </div>
-            <div className="w-[500px]">
-              <MarketShareCard />
-            </div>
-            <div className="w-[500px]">
-              <WeatherCard />
+            {/* Second Row - Two cards */}
+            <div
+              className="flex gap-8"
+              style={{
+                paddingLeft: "40px",
+                paddingRight: "100px",
+              }}
+            >
+              <div className="w-[50%] h-[200px]">
+                <MarketShareCard />
+              </div>
+              <div className="w-[50%] h-[200px]">
+                <WeatherCard />
+              </div>
             </div>
           </div>
         </div>
