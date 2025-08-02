@@ -5,6 +5,7 @@ import WeeklySalesCard from "../components/cards/weeklysales/WeeklySalesCard.jsx
 import TotalOrderCard from "../components/cards/totalorder/TotalOrderCard.jsx";
 import MarketShareCard from "../components/cards/marketshare/MarketShareCard.jsx";
 import WeatherCard from "../components/cards/weather/Weathercard.jsx";
+import RunningProjectsCard from "../components/cards/runningprojects/RunningProjects.jsx";
 
 const Home = () => {
   return (
@@ -51,6 +52,20 @@ const Home = () => {
               <div className="w-[50%] h-[200px]">
                 <WeatherCard />
               </div>
+            </div>
+
+            {/* Third Row - Two cards */}
+            <div
+              className="flex gap-8"
+              style={{
+                paddingLeft: "40px",
+                paddingRight: "100px",
+              }}
+            >
+              <div className="w-[50%] h-[200px]">
+                <RunningProjectsCard />
+              </div>
+             
             </div>
           </div>
         </div>
