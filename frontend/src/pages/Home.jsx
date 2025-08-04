@@ -6,6 +6,7 @@ import TotalOrderCard from "../components/cards/totalorder/TotalOrderCard.jsx";
 import MarketShareCard from "../components/cards/marketshare/MarketShareCard.jsx";
 import WeatherCard from "../components/cards/weather/Weathercard.jsx";
 import RunningProjectsCard from "../components/cards/runningprojects/RunningProjects.jsx";
+import TotalSalesCard from "../components/cards/totalsales/TotalSales.jsx";
 
 const Home = () => {
   return (
@@ -65,7 +66,10 @@ const Home = () => {
               <div className="w-[50%] h-[200px]">
                 <RunningProjectsCard />
               </div>
-             
+
+              <div className="w-[50%] h-[200px]">
+                <TotalSalesCard />
+              </div>
             </div>
           </div>
         </div>

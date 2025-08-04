@@ -1,0 +1,83 @@
+.total-sales-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.card-header h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #344050;
+  letter-spacing: -0.01em;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.month-selector-wrapper {
+  position: relative;
+}
+
+.month-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  /* min-width: 90px; */
+}
+
+.month-selector:hover {
+  background: #f9fafb;
+  color: #333;
+}
+
+.month-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  outline: #000;
+  max-height: auto;
+  /* overflow-y: auto; */
+}
+
+.month-option {
+  padding: 8px 12px;
+  font-size: 12px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.month-option:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.month-option.selected {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.chart-container {
+  margin-top: 16px;
+}
