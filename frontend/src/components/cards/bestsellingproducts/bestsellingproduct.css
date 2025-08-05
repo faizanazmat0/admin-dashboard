@@ -1,0 +1,209 @@
+/* Best Selling Products Card */
+.best-selling-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Header Row */
+.header-row {
+  background-color: #f9fafd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222933;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Products List */
+.products-list {
+  padding: 0;
+}
+
+.product-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s ease;
+}
+
+.product-row:hover {
+  background-color: #fafbfc;
+}
+
+.product-row:last-child {
+  border-bottom: none;
+}
+
+/* Product Info */
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 6px;
+}
+
+.Product-image {
+  width: 60px;
+  height: 36px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.Product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: text-decoration 0.2s ease;
+}
+
+.product-name:hover {
+  text-decoration: underline;
+}
+
+.product-category {
+  font-size: 14px;
+  color: #9ca3af;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+/* Product Revenue */
+.product-revenue {
+  font-size: 15px;
+  font-weight: 600;
+  color: #50596b;
+  text-align: center;
+}
+
+/* Product Percentage */
+.product-percentage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  gap: 40px;
+}
+
+.percentage-bar {
+  width: 100px;
+  height: 6px;
+  background-color: #ecf1f8;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.percentage-fill {
+  height: 100%;
+  background-color: #3b82f6;
+  border-radius: 100px;
+  transition: width 0.3s ease;
+}
+
+.percentage-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #50596b;
+}
+
+/* Footer Controls */
+.footer-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-top: 1px solid #e5e7eb;
+  background-color: #fafbfc;
+}
+
+/* Dropdown */
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+  transition: all 0.2s ease;
+  justify-content: space-between;
+}
+
+.dropdown-selector:hover {
+  border: 5px solid #adc9fa;
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  min-width: 100px;
+}
+
+.dropdown-option {
+  padding: 0px 12px;
+  font-size: 13px;
+  color: #49566b;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-option:hover {
+  background-color: #3b82f6 !important;
+
+  color: #ffffff;
+}
+
+/* View All Button */
+.view-all-btn {
+  background-color: none;
+  border: none;
+  color: #3b82f6;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #ebf4ff;
+}
