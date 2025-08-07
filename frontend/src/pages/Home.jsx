@@ -9,6 +9,7 @@ import RunningProjectsCard from "../components/cards/runningprojects/RunningProj
 import TotalSalesCard from "../components/cards/totalsales/TotalSales.jsx";
 import BestSellingProducts from "../components/cards/bestsellingproducts/BestSellingProduct.jsx";
 import SharedFiles from "../components/cards/sharedfiles/SharedFiles.jsx";
+import TopProduct from "../components/cards/topproduct/TopProduct.jsx";
 
 const Home = () => {
   return (
@@ -87,6 +88,19 @@ const Home = () => {
               </div>
               <div className="w-[35%] min-h-[200px]">
                 <SharedFiles />
+              </div>
+            </div>
+
+            {/* Fifth Row - Two cards */}
+            <div
+              className="flex gap-8"
+              style={{
+                paddingLeft: "40px",
+                paddingRight: "100px",
+              }}
+            >
+              <div className="w-[100%] min-h-[200px]">
+                <TopProduct />
               </div>
             </div>
           </div>
