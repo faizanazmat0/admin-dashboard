@@ -8,6 +8,7 @@ import WeatherCard from "../components/cards/weather/Weathercard.jsx";
 import RunningProjectsCard from "../components/cards/runningprojects/RunningProjects.jsx";
 import TotalSalesCard from "../components/cards/totalsales/TotalSales.jsx";
 import BestSellingProducts from "../components/cards/bestsellingproducts/BestSellingProduct.jsx";
+import SharedFiles from "../components/cards/sharedfiles/SharedFiles.jsx";
 
 const Home = () => {
   return (
@@ -81,8 +82,11 @@ const Home = () => {
                 paddingRight: "100px",
               }}
             >
-              <div className="w-[70%] min-h-[200px]">
+              <div className="w-[65%] min-h-[200px]">
                 <BestSellingProducts />
+              </div>
+              <div className="w-[35%] min-h-[200px]">
+                <SharedFiles />
               </div>
             </div>
           </div>

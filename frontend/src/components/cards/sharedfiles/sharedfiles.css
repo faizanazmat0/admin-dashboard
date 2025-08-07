@@ -1,0 +1,133 @@
+.shared-files-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+.card-header {
+  background-color: #f9fafd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  margin-bottom: 14px;
+}
+
+.card-header h3 {
+  font-size: 15px;
+  color: #374151;
+}
+
+.card-header a {
+  font-size: 15px;
+  color: #3b82f6;
+  text-decoration: none;
+}
+.card-header a:hover {
+  text-decoration: underline #3b82f6;
+}
+
+.file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.file-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid #dfe5ee;
+  position: relative;
+}
+
+.file-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.file-left img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.file-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.file-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.file-left:hover .file-title {
+  text-decoration: underline #000;
+}
+
+.file-meta {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.file-actions {
+  display: flex;
+  gap: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.file-row:hover .file-actions {
+  opacity: 1;
+  visibility: visible;
+}
+
+.action-btn {
+  position: relative;
+  background: #e5e7eb;
+  padding: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.action-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.action-btn:hover {
+  background-color: #d1d5db;
+}
+
+.tooltip {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  background: #000;
+  color: white;
+  padding: 6px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.action-btn:hover .tooltip {
+  opacity: 1;
+}
