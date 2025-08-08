@@ -1,7 +1,6 @@
 .total-sales-card {
   background-color: white;
   border-radius: 12px;
-  padding: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 }
@@ -37,7 +36,6 @@
   transition: background 0.2s ease;
   border: 1px solid #e5e7eb;
   background-color: white;
-  /* min-width: 90px; */
 }
 
 .month-selector:hover {
@@ -57,7 +55,6 @@
   z-index: 10;
   outline: #000;
   max-height: auto;
-  /* overflow-y: auto; */
 }
 
 .month-option {
@@ -79,5 +76,6 @@
 }
 
 .chart-container {
+  padding: 0 20px 10px 0;
   margin-top: 16px;
 }

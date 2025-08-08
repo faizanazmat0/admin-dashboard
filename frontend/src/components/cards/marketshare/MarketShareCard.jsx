@@ -26,9 +26,9 @@ const MarketShareCard = () => {
     <div className="market-share-card">
       {/* Card Header */}
       <div className="market-card-header">
-        <div className="market-header-content">
+       
           <h3 className="market-card-title">Market Share</h3>
-        </div>
+   
       </div>
 
       {/* Chart and Legend Layout */}
@@ -52,13 +52,13 @@ const MarketShareCard = () => {
         {/* Donut Chart with Center Text */}
         <div className="market-chart-container">
           <div className="chart-wrapper">
-            <ResponsiveContainer width="100%" height={140}>
+            <ResponsiveContainer>
               <PieChart>
                 <Pie
                   data={marketData}
                   cx="50%"
                   cy="50%"
-                  innerRadius={59}
+                  innerRadius={60}
                   outerRadius={65}
                   paddingAngle={2}
                   dataKey="value"
