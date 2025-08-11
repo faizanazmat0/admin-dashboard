@@ -22,7 +22,6 @@
 .sideBarConatiner img {
   width: 40px;
   height: 40px;
-
 }
 .sideBarConatiner span {
   font-size: 28px;
@@ -73,7 +72,9 @@
 
 /* Items Wrapper */
 .itemsWrapper {
-  overflow-y: auto;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #d0d8e4;
   flex-grow: 1;
   padding: 0 20px;
 }

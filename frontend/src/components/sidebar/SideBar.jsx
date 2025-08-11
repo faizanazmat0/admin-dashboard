@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AlignLeft, AlignJustify } from "lucide-react";
+import SideBarItems from "./SideBarItems.jsx";
 import "./sidebar.css";
-import SideBarItems from "./SideBarItems";
 
 const SideBar = () => {
   const [isCollapse, setIsCollapse] = useState(false);

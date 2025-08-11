@@ -22,7 +22,7 @@ import {
   ChartLine,
   Shapes,
   Map,
-  SquareKanba,
+  //SquareKanba,
   Layers,
   Rocket,
   Wrench,
@@ -299,13 +299,7 @@ export const moduleItems = [
       { label: "Leaflet map", href: "/module/maps/leaflet-map" },
     ],
   },
-  {
-    id: "widgets",
-    icon: SquareKanba,
-    label: "Widgets",
-    hasDropdown: false,
-    href: "/module/widgets",
-  },
+
   {
     id: "multi",
     icon: Layers,
@@ -370,31 +364,3 @@ export const documentationItems = [
     href: "/doc/changelog",
   },
 ];
-
-// {
-//     id: "multi",
-//     icon: Layers, // Changed from MailOpen
-//     label: "Multi Level",
-//     hasDropdown: true,
-//     dropdownItems: [
-//       {
-//         label: "Level Two",
-//         href: "/modules/multi/level-two",
-//         hasNestedDropdown: true, // 🆕 NEW: Nested dropdown support
-//         nestedItems: [
-//           { label: "Level Two A", href: "/modules/multi/level-two/a" },
-//           { label: "Level Two B", href: "/modules/multi/level-two/b" },
-//           {
-//             label: "Level Three",
-//             hasNestedDropdown: true, // 🆕 Nested within nested
-//             nestedItems: [
-//               { label: "Level Three A", href: "/modules/multi/level-three/a" },
-//               { label: "Level Three B", href: "/modules/multi/level-three/b" },
-//             ],
-//           },
-//         ],
-//       },
-//       { label: "Level Three", href: "/modules/multi/level-three" },
-//       { label: "Level Four", href: "/modules/multi/level-four" },
-//     ],
-//   },
